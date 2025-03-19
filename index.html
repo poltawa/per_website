@@ -50,7 +50,8 @@
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed, #c026d3);
+            /* background: linear-gradient(135deg, #4f46e5, #7c3aed, #c026d3); */
+            background-color: #0a192f;
             position: relative;
             overflow: hidden;
         }
@@ -235,6 +236,15 @@
             text-indent: -1.4em; /* 负缩进，使第一行文字左移 */
             padding-left: 2em; /* 添加左边距，使整体内容右移 */
         }
+
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -266,6 +276,7 @@
         </div>
     </nav>
 
+    <div class="particles-container" id="particles-js"></div>
     <!-- 头部区域 -->
     <header class="gradient-bg text-white py-20 md:py-32 relative">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
@@ -275,11 +286,12 @@
         </div>
         <div class="container mx-auto px-4 text-center relative z-10">
             <div class="animate-float">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">庞<span class="text-pink-300">宇</span></h1>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">庞宇<span class="text-pink-300"></span></h1>
                 <p class="text-xl md:text-2xl mb-8 text-indigo-100">AI产品经理 | 全栈开发者 | 创新者</p>
             </div>
             <div class="flex justify-center space-x-4 mt-10">
-                <a href="#contact" class="glass-card text-indigo-900 hover:bg-white px-6 py-3 rounded-full font-medium transition transform hover:scale-105">联系我</a>
+                <!-- <a href="#contact" class="glass-card text-indigo-900 hover:bg-white px-6 py-3 rounded-full font-medium transition transform hover:scale-105">联系我</a> -->
+                <a href="#contact" class="dark-glass-card text-white hover:bg-indigo-900/80 px-6 py-3 rounded-full font-medium transition transform hover:scale-105">联系我</a>
                 <a href="#experience" class="dark-glass-card text-white hover:bg-indigo-900/80 px-6 py-3 rounded-full font-medium transition transform hover:scale-105">查看经历</a>
             </div>
         </div>
@@ -753,6 +765,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         // 移动端菜单切换
         const menuBtn = document.getElementById('menuBtn');
@@ -833,6 +846,123 @@
                 console.error('无法复制文本: ', err);
             });
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化particles背景
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#64ffda"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#64ffda",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+            
+            // 滚动功能
+            document.getElementById('scrollDown').addEventListener('click', function() {
+                window.scrollTo({
+                    top: document.getElementById('experience').offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
