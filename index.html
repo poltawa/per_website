@@ -405,7 +405,7 @@
                         
                         <div class="mb-6">
                             <h4 class="font-semibold text-gray-800 mb-2 gradient-border inline-block pb-1">多模态能力落地</h4>
-                            <p class="text-gray-700 mb-3 ml-2">负责同花顺创新型ChatBot重点项目国内问财、海外Aime的多模态能力建设，实现金融场景下图像圈选分析、图像上传等核心投顾功能落地，显著提升用户主动输入量与答案可用率，拓展产品多模态对话能力。</p>
+                            <p class="text-gray-700 mb-3 ml-2">负责同花顺创新型ChatBot重点项目国内问财、海外Aime的多模态能力建设，实现金融场景下图像<a href="javascript:void(0);" class="text-blue-600 hover:underline" onclick="showModal('circleModal')">圈选分析</a>、图像上传等核心投顾功能落地，显著提升用户主动输入量与答案可用率，拓展产品多模态对话能力。</p>
                             <ul class="list-disc list-inside text-gray-600 space-y-2 ml-2">
                                 <li class="indent-second-line"><span class="font-medium text-indigo-600">视觉模型训练及Agent协同</span>：梳理同花顺端内K线、分时、副图、资讯等主要模块的图像，细粒度分类用户意图，定义并标注视觉模型及Agent模型规划、总结的数据逻辑，实现跨工具协同调用能力。后期通过原生多模态模型，实现图像模型直接规划及工具调用的独立架构，降低了原本图像工具模式的信息损耗</li>
                                 <li class="indent-second-line"><span class="font-medium text-indigo-600">交互体验创新</span>：优化圈选分析交互流程，与对话机器人入口深度融合，显著提升用户操作流畅性，实现“哪里不会圈哪里”的用户体验，降低用户流失率20%以上</li>
@@ -493,7 +493,7 @@
                             <span class="text-sm font-medium text-purple-600">全栈AI产品经理</span>
                         </div>
                     </div>
-                    <p class="text-gray-700 mb-4">独立设计并利用AI编程工具WindSurf开发了一款微信小程序——<a href="javascript:void(0);" class="text-blue-600 hover:underline" onclick="showQRCode()">毛球翻译官</a> (微信可搜到)。用户可通过文字或上传宠物图片与拟人化的宠物进行多轮对话，系统支持上下文记忆和个性化宠物设定，回复形式智能切换文本或图片。将多模态对话技术与爱宠场景结合，并创新性地将图像生成意图嵌入自然对话流。</p>
+                    <p class="text-gray-700 mb-4">独立设计并利用AI编程工具WindSurf开发了一款微信小程序——<a href="javascript:void(0);" class="text-blue-600 hover:underline" onclick="showModal('qrCodeModal')">毛球翻译官</a> (微信可搜到)。用户可通过文字或上传宠物图片与拟人化的宠物进行多轮对话，系统支持上下文记忆和个性化宠物设定，回复形式智能切换文本或图片。将多模态对话技术与爱宠场景结合，并创新性地将图像生成意图嵌入自然对话流。</p>
                     <div class="mb-4">
                         <h4 class="font-semibold text-gray-800 mb-2 gradient-border inline-block pb-1">需求洞察与产品创新</h4>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 ml-2">通过分析小红书中大量萌宠图文，发现用户热衷于拟人化宠物并表达其“情绪和心理”，尤其是“人，咪想xxx”等类型的帖子，反映出用户希望与宠物进行对话的潜在需求。以此为切入点，开发了支持多模态交互的Chatbot，精准满足用户的创意表达与情感陪伴需求。
@@ -744,18 +744,36 @@
     </footer>
 
     <!-- 二维码弹窗 -->
-    <div id="qrCodeModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" onclick="hideQRCode()">
+    <div id="qrCodeModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" onclick="hideModal('qrCodeModal')">
         <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4 relative" onclick="event.stopPropagation()">
-            <button onclick="hideQRCode()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+            <button onclick="hideModal('qrCodeModal')" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
             <h3 class="text-xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">扫码体验毛球翻译官</h3>
             <div class="flex justify-center mb-4">
-                <img src="./qrcode.jpg" alt="毛球翻译官小程序二维码" class="w-64 h-64 object-cover rounded-lg shadow-md">
+                <div class="max-w-[70%]">
+                    <img src="./qrcode.jpg" alt="毛球翻译官小程序二维码" class="w-auto h-auto object-contain rounded-lg shadow-md">
+                </div>
             </div>
             <p class="text-gray-600 text-center">微信扫一扫，立即体验AI宠物对话</p>
+        </div>
+    </div>
+
+    <!-- 圈选弹窗 -->
+    <div id="circleModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" onclick="hideModal('circleModal')">
+        <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4 relative" onclick="event.stopPropagation()">
+            <button onclick="hideModal('circleModal')" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="flex justify-center mb-4">
+                <div class="max-w-[70%]">
+                    <img src="./circle.png" alt="圈选" class="w-auto h-auto object-contain rounded-lg shadow-md">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -818,13 +836,13 @@
         });
         
         // 二维码弹窗控制
-        function showQRCode() {
-            document.getElementById('qrCodeModal').classList.remove('hidden');
+        function showModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
         
-        function hideQRCode() {
-            document.getElementById('qrCodeModal').classList.add('hidden');
+        function hideModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
         
@@ -956,12 +974,12 @@
             });
             
             // 滚动功能
-            document.getElementById('scrollDown').addEventListener('click', function() {
-                window.scrollTo({
-                    top: document.getElementById('experience').offsetTop,
-                    behavior: 'smooth'
-                });
-            });
+            // document.getElementById('scrollDown').addEventListener('click', function() {
+            //     window.scrollTo({
+            //         top: document.getElementById('experience').offsetTop,
+            //         behavior: 'smooth'
+            //     });
+            // });
         });
     </script>
 </body>
