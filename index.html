@@ -314,7 +314,7 @@
                 <div class="md:w-1/2 mb-8 md:mb-0">
                     <div class="glass-card p-8 rounded-xl shadow-sm bg-gradient-to-br from-indigo-50 to-purple-50">
                         <p class="text-lg text-gray-700 leading-relaxed">
-                            我是一名专注于AI领域的产品经理，拥有计算机视觉硕士学位和丰富的产品实践经验。在同花顺，我负责多模态技术落地和Agent能力建设，显著提升了用户体验和产品指标。工作内外，我热衷于将AI技术与实际场景结合，提升效率，创造有价值的产品体验。
+                            我拥有计算机视觉硕士学位和丰富的AI实践经验。在同花顺，我负责多模态技术落地和Agent能力建设，显著提升了用户体验和产品指标。工作内外，我热衷于将AI技术与实际场景结合，提升工作学习效率，创造有价值的产品体验，并独立开发了一款线上AI产品。
                         </p>
                         <div class="mt-6 flex flex-wrap gap-3">
                             <span class="skill-badge bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-sm">AI产品</span>
@@ -330,23 +330,23 @@
                     <div class="grid grid-cols-2 gap-6">
                         <div class="glass-card p-6 rounded-xl shadow-sm border border-indigo-50 section-transition bg-gradient-to-br from-white to-indigo-50">
                             <i class="fas fa-brain text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500 mb-4"></i>
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">AI专业知识</h3>
-                            <p class="text-gray-600">深厚的AI技术背景和产品实践经验</p>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Native AI工作流</h3>
+                            <p class="text-gray-600">AI需求分析及产品设计，利用工作流、代码验证模型效果及提升工作效率</p>
                         </div>
                         <div class="glass-card p-6 rounded-xl shadow-sm border border-indigo-50 section-transition bg-gradient-to-br from-white to-pink-50">
                             <i class="fas fa-lightbulb text-3xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500 mb-4"></i>
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">创新思维</h3>
-                            <p class="text-gray-600">善于发现用户需求，创造创新解决方案</p>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">Prompt工程</h3>
+                            <p class="text-gray-600">Prompt设计、调优和验证，应用于实际金融投顾对话(垂类领先)</p>
                         </div>
                         <div class="glass-card p-6 rounded-xl shadow-sm border border-indigo-50 section-transition bg-gradient-to-br from-white to-purple-50">
                             <i class="fas fa-chart-line text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 mb-4"></i>
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">数据驱动</h3>
-                            <p class="text-gray-600">基于数据分析优化产品决策</p>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">创新思维</h3>
+                            <p class="text-gray-600">善于发现用户需求，创造创新解决方案</p>
                         </div>                        
                         <div class="glass-card p-6 rounded-xl shadow-sm border border-indigo-50 section-transition bg-gradient-to-br from-white to-blue-50">
                             <i class="fas fa-users text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500 mb-4"></i>
-                            <h3 class="text-xl font-semibold mb-2 text-gray-800">团队协作</h3>
-                            <p class="text-gray-600">出色的跨部门沟通与协作能力</p>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800">数据驱动</h3>
+                            <p class="text-gray-600">基于数据分析优化产品决策</p>
                         </div>
                     </div>
                 </div>
@@ -412,6 +412,7 @@
                             <p class="text-gray-700 mb-3 ml-2">负责同花顺创新型ChatBot重点项目国内问财、海外Aime的多模态能力建设，实现金融场景下图像圈选分析、图像上传等核心投顾功能落地，显著提升用户主动输入量与答案可用率，拓展产品<a href="javascript:void(0);" class="text-blue-600 hover:underline" onclick="showModal('circleModal')">多模态对话</a>能力。</p>
                             <ul class="list-disc list-inside text-gray-600 space-y-2 ml-2">
                                 <li class="indent-second-line"><span class="font-medium text-indigo-600">视觉模型训练及Agent协同</span>：梳理同花顺端内K线、分时、副图、资讯等主要模块的图像，细粒度分类用户意图，定义并标注<span class="underline decoration-wavy">视觉模型及Agent模型规划、总结</span>的数据逻辑，实现跨工具协同调用能力。后期通过<span class="underline decoration-wavy">原生多模态模型</span>，实现图像模型直接规划及工具调用的独立架构，降低了原本图像工具模式的信息损耗</li>
+                                <li class="indent-second-line"><span class="font-medium text-indigo-600">Prompt优化</span>：<span class="underline decoration-wavy">设计三组Prompt</span>（1统一模板；2结构化模版+调整Agent规划、总结Prompt的结构、工具描述及占位符设计；3以上+背景信息数量限制），端到端对比生成效果（每组n=10次调用），最终选择最优方案3（<span class="underline decoration-wavy">结构化模版+约束条件、背景信息token总限制1w以下</span>），进而提升答案可用率</li>
                                 <li class="indent-second-line"><span class="font-medium text-indigo-600">交互体验创新</span>：调研市场上多模态类产品交互形态，尤其是圈搜场景（Google、Samsung、Vivo），优化圈选分析交互流程，与对话机器人入口深度融合，显著提升用户操作流畅性，实现“哪里不会圈哪里”的用户体验，<span class="underline decoration-wavy">降低用户流失率20%以上</span></li>
                                 <li class="indent-second-line"><span class="font-medium text-indigo-600">场景赋能</span>：低成本复用以上能力，赋能同花顺截图后图像分析、PC客户端识图等业务场景，实现多方共赢</li>
                                 <li class="indent-second-line"><span class="font-medium text-indigo-600">量化成果</span>：答案可用率从<span class="underline decoration-wavy">5%提升至51%</span>，支持绝大多数场景下的图像精准理解。国内问财月均主动输入问句数从<span class="underline decoration-wavy">400增长至2.5W</span>，海外Aime从<span class="underline decoration-wavy">300增长至4500</span></li>
@@ -503,13 +504,18 @@
                         <h4 class="font-semibold text-gray-800 mb-2 gradient-border inline-block pb-1">需求洞察与产品创新</h4>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 ml-2">通过分析小红书中大量萌宠图文，发现用户热衷于拟人化宠物并表达其“情绪和心理”，尤其是“人，咪想xxx”等类型的帖子，反映出用户希望与宠物进行对话的潜在需求。以此为切入点，开发了支持多模态交互的Chatbot，精准满足用户的创意表达与情感陪伴需求。
                         </ul>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 ml-2 mt-2">
+                            <li class="indent-second-line"><span class="font-medium text-indigo-600">自然对话流嵌入图像生成</span>：突破传统工具型生图产品“生成一张xxx图”的指令式交互，系统基于对话内容、语境，<span class="underline decoration-wavy">智能判断回复文本/图片</span>，使对话更贴近人与人聊天的自然交互；保留宠物核心特征的同时，对动作、场景进行趣味性的局部重绘</li>
+                            <li class="indent-second-line"><span class="font-medium text-indigo-600">多模态记忆分层</span>：搭建<span class="underline decoration-wavy">长期记忆</span> (过去聊天中的关键内容) 和<span class="underline decoration-wavy">短期记忆</span> (最近20条对话记录) 的<span class="underline decoration-wavy">分层处理机制</span>，给对话生成补充更多背景信息</li>
+                        </ul>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-gray-800 mb-2 gradient-border inline-block pb-1">功能架构创新及实现</h4>
+                        <h4 class="font-semibold text-gray-800 mb-2 gradient-border inline-block pb-1">技术实现</h4>
                         <ul class="list-disc list-inside text-gray-600 space-y-2 ml-2">
-                            <li class="indent-second-line"><span class="font-medium text-indigo-600">自然对话流嵌入图像生成</span>：突破传统工具型生图产品“生成一张xxx图”的指令式交互，系统基于对话内容、语境，智能判断回复文本/图片，使对话更贴近人与人聊天的自然交互；图像生成基于Gemini-2-Flash-exp，保留宠物核心特征的同时，对动作、场景进行趣味性的局部重绘</li>
-                            <li class="indent-second-line"><span class="font-medium text-indigo-600">多模态记忆分层</span>：搭建长期记忆 (过去聊天中的关键内容) 和短期记忆 (最近20条对话记录) 的分层处理机制。采用RAG+CLIP技术，向量化对话历史中的关键信息，统一图文向量空间，通过语义相似度检索实现上下文融合，实现跨模态语义检索</li>
-                            <li class="indent-second-line"><span class="font-medium text-indigo-600">动态Prompt驱动</span>：用户可自定义宠物的个性、习惯和喜好等长期设定，设计结构完整、风格鲜明、场景遵循的Prompt，确保系统回复符合设定</li>
+                            <li class="indent-second-line"><span class="font-medium text-indigo-600">全栈开发</span>：微信小程序前端、Python Flask后端、数据库设计、向量数据库、代码模块化处理、微信云开发部署上线</li>
+                            <li class="indent-second-line"><span class="font-medium text-indigo-600">AI模型评测及调用</span>：对比国内外先进模型的生成效果（语言风格、图像理解能力、网感），最终采用文本模型（DeepSeek V3）、图像理解（阶跃星辰step-1v-8k）、图像生成（先后是liblib工作流及Gemini-2-Flash-exp）</li>
+                            <li class="indent-second-line"><span class="font-medium text-indigo-600">动态Prompt驱动</span>：设计分层Prompt，输入层（用户自定义的宠物设定包括性格、习惯、爱好，和实时对话记录以及长期记忆），规则层（<span class="underline decoration-wavy">占位符设计、图像识别要素分级、冲突处理、模糊处理、正反例等机制</span>），定性对比模型输出效果</li>
+                            <li class="indent-second-line"><span class="font-medium text-indigo-600">多模态RAG</span>：采用CLIP统一图文向量空间，基于JinaAI实现跨模态语义检索，召回长期记忆中相似度Top3的相关信息</li>
                         </ul>
                     </div>
                 </div>                
@@ -567,7 +573,7 @@
                                 <div>
                                     <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">rct AI</h3>
                                     <p class="text-gray-600 mt-1">Mirror World项目（Web3）</p>
-                                    <p class="text-gray-500 mt-2">YC孵化企业 | 首批OpenAI合作方 | Product Hunt Web3产品月榜Top2</p>
+                                    <p class="text-gray-500 mt-2">Sonic SVM团队 | Product Hunt Web3产品月榜Top2 | 首批OpenAI合作方 | YC孵化企业</p>
                                 </div>
                                 <div class="flex items-center mt-3 md:mt-0">
                                     <span class="text-sm text-gray-500">2022.05 - 2022.06</span>
